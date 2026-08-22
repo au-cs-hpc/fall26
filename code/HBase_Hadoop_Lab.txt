@@ -1,0 +1,113 @@
+——————————————————————————————————————————
+SQOOP DATA IMPORT
+——————————————————————————————————————————
+mysql -uroot -pcloudera
+
+SHOW DATABASES;
+
+CREATE DATABASE logdata;
+
+USE logdata;
+
+CREATE TABLE weblogs (ipyear  varchar(255) NOT NULL PRIMARY KEY, january int(11) DEFAULT NULL, february int(11) DEFAULT NULL,   march int(11) DEFAULT NULL, april int(11) DEFAULT NULL, may int(11) DEFAULT NULL, june int(11) DEFAULT NULL, july int(11) DEFAULT NULL, august int(11) DEFAULT NULL, september int(11) DEFAULT NULL, october int(11) DEFAULT NULL, november int(11) DEFAULT NULL, december int(11) DEFAULT NULL);
+
+LOAD DATA LOCAL INFILE '/home/cloudera/Downloads/weblogs.csv' INTO TABLE weblogs FIELDS TERMINATED BY ',' LINES TERMINATED BY  '\n' IGNORE 1 LINES;
+
+sqoop import --connect jdbc:mysql://localhost:3306/logdata --username root --password cloudera --table weblogs --hbase-table weblogs --column-family traffic --hbase-row-key ipyear --hbase-create-table -m 1
+
+——————————————————————————————————————————
+HBASE
+——————————————————————————————————————————
+
+scan 't1'
+
+scan 't1', {COLUMNS => ['c1', 'c2'], LIMIT => 10, STARTROW => 'xyz'}
+
+scan 't1', {TIMERANGE => [1303668804, 1303668904]}
+
+scan 't1', {FILTER => org.apache.hadoop.hbase.filter.ColumnPaginationFilter.new(1,0)}
+
+create 'Stocks','Current','Closing’
+
+put 'Stocks','ABC','Current:Price',97.3 
+
+put 'Stocks','ABC', 'Closing:Price', 95.7
+
+scan 'Stocks'
+
+put 'Stocks','ABC',	'Current:Status', 'Up'
+
+get 'Stocks','ABC'
+
+put 'Stocks','ABC',	'Current:Price',	99.1
+
+get 'Stocks','ABC'
+
+get 'Stocks','ABC', {TIMERANGE=>[0,nnn-1]}
+
+delete 'Stocks', 'ABC', 'Current:Status'
+
+get	'Stocks', 'ABC'
+
+——————————————————————————————————————————
+HDFS / HBASE DATA IMPORT
+——————————————————————————————————————————
+
+sudo hadoop	fs -mkdir /data
+cd Downloads/
+sudo hadoop	fs -copyFromLocal stocks.txt /data/ 
+sudo hadoop	fs -ls /data
+
+sudo hbase org.apache.hadoop.hbase.mapreduce.ImportTsv -Dimporttsv.columns="HBASE_ROW_KEY,Closing:Price,Current:Price" -Dimporttsv.bulk.output="/data/storefile" Stocks /data/stocks.txt
+
+sudo hbase org.apache.hadoop.hbase.mapreduce.LoadIncrementalHFiles  /data/storefile Stocks
+
+hbase shell  
+
+scan 'Stocks'
+
+——————————————————————————————————————————
+HIVE
+——————————————————————————————————————————
+
+CREATE DATABASE log_data;
+
+USE log_data;
+
+CREATE TABLE apache_log (host STRING, identity STRING, user STRING, time STRING, request STRING, status STRING, size STRING, referer STRING, agent STRING);
+
+hadoop	fs	–copyFromLocal	~/path/data/file.log  statistics/log_data/
+
+LOAD DATA INPATH 'statistics/log-data/apache.log' OVERWRITE	INTO TABLE apache_log;
+
+CREATE   TABLE	flights (flight_date DATE, airline_code INT, carrier_code STRING, origin STRING, dest STRING, depart_time INT, depart_delta INT, depart_delay INT, arrive_time INT, arrive_delta INT, arrive_delay INT, is_cancelled BOOLEAN, cancellation_code STRING, distance INT, carrier_delay INT, weather_delay INT, nas_delay INT, security_delay INT, late_aircraft_delay INT) ROW FORMAT DELIMITED FIELDS TERMINATED BY '\t' STORED AS  TEXTFILE;
+
+CREATE TABLE shakespeare (lineno STRING, linetext STRING) ROW FORMAT DELIMITED FIELDS TERMINATED BY '\t'; 
+
+CREATE TABLE airlines (code INT, description STRING) ROW FORMAT DELIMITED FIELDS  TERMINATED BY '\t' STORED AS TEXTFILE;
+
+CREATE TABLE carriers (code STRING, description STRING) ROW FORMAT DELIMITED FIELDS TERMINATED BY '\t' STORED AS TEXTFILE;
+
+CREATE TABLE cancellation_reasons (code STRING, description STRING) ROW FORMAT DELIMITED FIELDS  TERMINATED BY '\t' STORED AS  TEXTFILE;
+
+LOAD DATA LOCAL INPATH '/flight_data/ontime_flights.tsv' OVERWRITE INTO TABLE flights;
+
+hadoop fs -mkdir /flight_data
+hadoop fs -copyFromLocal /home/cloudera/Downloads/flight_data/airlines.tsv /flight_data/airlines.tsv
+hadoop fs -copyFromLocal /home/cloudera/Downloads/flight_data/carriers.tsv /flight_data/carriers.tsv
+hadoop fs -copyFromLocal /home/cloudera/Downloads/flight_data/cancellation_reasons.tsv /flight_data/cancellation_reasons.tsv
+hadoop fs -copyFromLocal /home/cloudera/Downloads/flight_data/ontime_flights.tsv /flight_data/ontime_flights.tsv
+
+LOAD DATA LOCAL INPATH 'flight_data/airlines.tsv' OVERWRITE INTO TABLE airlines;
+LOAD DATA LOCAL INPATH 'flight_data/carriers.tsv' OVERWRITE INTO TABLE carriers;
+LOAD DATA LOCAL INPATH 'flight_data/cancellation_reasons.tsv' OVERWRITE INTO TABLE cancellation_reasons;
+LOAD DATA LOCAL INPATH 'flight_data/ontime_flights.tsv' OVERWRITE INTO TABLE flights;
+
+SELECT a.description, AVG(f.depart_delay) FROM airlines a JOIN flights f ON a.code = f.airline_code GROUP BY a.description;
+
+SELECT c.description, AVG(f.depart_delay) FROM carriers c JOIN flights f ON c.code = f.carrier_code GROUP BY c.description;
+
+CREATE EXTERNAL TABLE StockPrices (Stock STRING, ClosingPrice FLOAT, CurrentPrice FLOAT) STORED BY 'org.apache.hadoop.hive.hbase.HBaseStorageHandler' WITH SERDEPROPERTIES ('hbase.columns.mapping' =	':key,Closing:Price,Current:Price') TBLPROPERTIES ('hbase.table.name' = 'Stocks');
+
+SELECT Stock, CurrentPrice, ClosingPrice, IF(CurrentPrice > ClosingPrice, 'Up', IF (CurrentPrice < ClosingPrice, 'Down', '-')) AS Status FROM StockPrices ORDER BY Stock;
+
