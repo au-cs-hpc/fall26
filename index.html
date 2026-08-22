@@ -1,243 +1,1238 @@
-<tbody>
-    <tr class="week-header">
-        <td colspan="4">Week 1</td>
-    </tr>
-    <tr>
-        <td>Tue., Sep. 1</td>
-        <td>Introduction to HPC and Cloud - <strong>Online (Zoom)</strong></td>
-        <td>S1</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Fri., Sep. 4</td>
-        <td>Big Data Analytics - <strong>Online (Zoom)</strong></td>
-        <td>S2 - S3</td>
-        <td></td>
-    </tr>
+<!DOCTYPE html>
+<html lang="en">
 
-    <tr class="week-header">
-        <td colspan="4">Week 2</td>
-    </tr>
-    <tr>
-        <td>Tue., Sep. 8</td>
-        <td>Hadoop I - <strong>Online (Zoom)</strong></td>
-        <td>S4</td>
-        <td><em>Install VM</em></td>
-    </tr>
-    <tr>
-        <td>Fri., Sep. 11</td>
-        <td>Hadoop II - <strong>Online (Zoom)</strong></td>
-        <td>S4</td>
-        <td></td>
-    </tr>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
 
-    <tr class="week-header">
-        <td colspan="4">Week 3</td>
-    </tr>
-    <tr>
-        <td>Tue., Sep. 15</td>
-        <td>NoSQL I</td>
-        <td>S5</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Fri., Sep. 18</td>
-        <td>NoSQL II</td>
-        <td>S5</td>
-        <td></td>
-    </tr>
+    <title>CSC483/683: Cloud Computing and Machine Learning</title>
 
-    <tr class="week-header">
-        <td colspan="4">Week 4</td>
-    </tr>
-    <tr>
-        <td>Tue., Sep. 22</td>
-        <td>Spark: Intro, RDDs & Databricks Platform</td>
-        <td>S6</td>
-        <td><em>Create Databricks Account</em></td>
-    </tr>
-    <tr>
-        <td>Fri., Sep. 25</td>
-        <td>Spark: Dataframes</td>
-        <td>S6</td>
-        <td></td>
-    </tr>
+    <script
+        src="https://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous">
+    </script>
 
-    <tr class="week-header">
-        <td colspan="4">Week 5</td>
-    </tr>
-    <tr>
-        <td>Tue., Sep. 29</td>
-        <td>Spark: Transformations</td>
-        <td>S7</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Fri., Oct. 2</td>
-        <td>Spark: Internals</td>
-        <td>S8</td>
-        <td><em>Pool of Papers Release</em></td>
-    </tr>
+    <!-- Latest compiled and minified CSS -->
+    <link
+        rel="stylesheet"
+        href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+        crossorigin="anonymous">
 
-    <tr class="week-header">
-        <td colspan="4">Week 6</td>
-    </tr>
-    <tr>
-        <td>Tue., Oct. 6</td>
-        <td><strong>Midterm Exam I</strong></td>
-        <td></td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Fri., Oct. 9</td>
-        <td>Spark: Structured Streaming / Delta Lakes</td>
-        <td>S9</td>
-        <td></td>
-    </tr>
+    <!-- Optional theme -->
+    <link
+        rel="stylesheet"
+        href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
+        integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJu7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
+        crossorigin="anonymous">
 
-    <tr class="week-header">
-        <td colspan="4">Week 7</td>
-    </tr>
-    <tr>
-        <td>Tue., Oct. 13</td>
-        <td>Spark: ML and MLlib / Linear Regression</td>
-        <td>S10</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Fri., Oct. 16</td>
-        <td><strong>Fall Break (no class)</strong></td>
-        <td></td>
-        <td></td>
-    </tr>
+    <!-- Latest compiled and minified JavaScript -->
+    <!--
+    <script
+        src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+        integrity="sha384-Tc5IQib027qvyJfHjOMaLkfuwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
+        crossorigin="anonymous">
+    </script>
+    -->
 
-    <tr class="week-header">
-        <td colspan="4">Week 8</td>
-    </tr>
-    <tr>
-        <td>Tue., Oct. 20</td>
-        <td>Spark: MLflow / Decision Trees</td>
-        <td>S11</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Fri., Oct. 23</td>
-        <td>Spark: HyperOpt / Random Forest</td>
-        <td>S12</td>
-        <td></td>
-    </tr>
+    <script
+        src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous">
+    </script>
 
-    <tr class="week-header">
-        <td colspan="4">Week 9</td>
-    </tr>
-    <tr>
-        <td>Tue., Oct. 27</td>
-        <td>Spark: HyperOpt / AutoML / Gradient Boosted Trees</td>
-        <td>S13</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Fri., Oct. 30</td>
-        <td>Spark: Pandas UDF</td>
-        <td>S13</td>
-        <td></td>
-    </tr>
+    <script
+        src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous">
+    </script>
 
-    <tr class="week-header">
-        <td colspan="4">Week 10</td>
-    </tr>
-    <tr>
-        <td>Tue., Nov. 3</td>
-        <td>Spark: Distributed k-Means / Logistic Regression / Collaborative Filtering</td>
-        <td>S14</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Fri., Nov. 6</td>
-        <td>Graph Analysis: GraphX / Case Study / GraphFrames</td>
-        <td>S15</td>
-        <td><em>Project Guidelines</em></td>
-    </tr>
+    <script
+        src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous">
+    </script>
 
-    <tr class="week-header">
-        <td colspan="4">Week 11</td>
-    </tr>
-    <tr>
-        <td>Tue., Nov. 10</td>
-        <td>Deep Learning / Hyperopt / Transfer Learning / One-Class</td>
-        <td>S16</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Fri., Nov. 13</td>
-        <td>Deep Learning: Horovod</td>
-        <td>S17</td>
-        <td><strong>Paper critiques submission</strong></td>
-    </tr>
+    <link
+        href="https://fonts.googleapis.com/css?family=Arvo|Montserrat"
+        rel="stylesheet">
 
-    <tr class="week-header">
-        <td colspan="4">Week 12</td>
-    </tr>
-    <tr>
-        <td>Tue., Nov. 17</td>
-        <td>Deep Learning: Model Interpretability</td>
-        <td>S17</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Fri., Nov. 20</td>
-        <td>Spark: NLP <br/>
-            <strong>Invited Guest</strong>
-        </td>
-        <td>S18</td>
-        <td><em>Project: Data Exploration / Pre-processing</em></td>
-    </tr>
+    <link
+        href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+        rel="stylesheet"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+        crossorigin="anonymous">
 
-    <tr class="week-header">
-        <td colspan="4">Week 13</td>
-    </tr>
-    <tr>
-        <td>Tue., Nov. 24</td>
-        <td>Spark: ML Deployment / ML in Production</td>
-        <td>S19</td>
-        <td><em>Project: Modeling</em></td>
-    </tr>
-    <tr>
-        <td>Fri., Nov. 27</td>
-        <td><strong>Thanksgiving Holiday (no class)</strong></td>
-        <td></td>
-        <td></td>
-    </tr>
+    <link
+        rel="stylesheet"
+        type="text/css"
+        href="updated-styles.css">
 
-    <tr class="week-header">
-        <td colspan="4">Week 14</td>
-    </tr>
-    <tr>
-        <td>Tue., Dec. 1</td>
-        <td><strong>Midterm Exam II</strong></td>
-        <td></td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Fri., Dec. 4</td>
-        <td>Spark: Performance Optimization</td>
-        <td>S20</td>
-        <td></td>
-    </tr>
+    <style type="text/css">
 
-    <tr class="week-header">
-        <td colspan="4">Week 15</td>
-    </tr>
-    <tr>
-        <td>Tue., Dec. 8</td>
-        <td><strong>Paper Presentations</strong></td>
-        <td></td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Fri., Dec. 11</td>
-        <td><strong>Paper Presentations</strong></td>
-        <td></td>
-        <td><strong>Project submission</strong></td>
-    </tr>
-</tbody>
+        table {
+            font-size: 12px;
+        }
+
+        table ul {
+            padding-left: 5px;
+        }
+
+        dt {
+            font-weight: bold;
+        }
+
+        dd {
+            padding-bottom: 10px;
+        }
+
+        img {
+            border: 1px solid black;
+        }
+
+        .week-header {
+            background-color: #eeeeee;
+        }
+
+        @media screen and (max-width: 700px) {
+            table {
+                font-size: 8px;
+            }
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+<!-- ========================================================= -->
+<!-- COURSE HEADER -->
+<!-- ========================================================= -->
+
+<div class="container" style="text-align: center">
+
+    <div class="page-header">
+
+        <img
+            class="img-responsive"
+            style="background:none; border:none;"
+            width="60%"
+            src="logo.png"
+            alt="" />
+
+        <h1>
+            Cloud Computing and Machine Learning
+            <br>
+            <small>[CSC 483/683 - Fall 2026]</small>
+        </h1>
+
+    </div>
+
+</div>
+
+
+<!-- ========================================================= -->
+<!-- GENERAL COURSE INFORMATION -->
+<!-- ========================================================= -->
+
+<div class="container">
+
+    <h3 style="text-align: center">General Course Info</h3>
+
+    <br>
+
+    <div class="row">
+
+        <div class="col-sm-4">
+
+            <div class="card-body">
+
+                <ul class="list-group">
+
+                    <li class="list-group-item">
+                        <b>Instructor:</b>
+                        <br>
+                        Roberto Corizzo
+                        <small>[rcorizzo@american.edu]</small>
+                    </li>
+
+                    <li class="list-group-item">
+                        <b>First Class: Sep 1</b>
+                        <br>
+                    </li>
+
+                    <li class="list-group-item">
+                        <b>Location: DMTI 116</b>
+                        <br>
+                    </li>
+
+                    <!--
+                    <li class="list-group-item">
+                        <b>Office Hours:</b>
+                        <br>
+                        Schedule a time to meet with me through
+                        <a href="https://app.acuityscheduling.com/schedule.php?owner=21540415">
+                            Acuity
+                        </a>
+                    </li>
+                    -->
+
+                    <li class="list-group-item">
+                        <b>Office Hours:</b>
+                        <br>
+                        T 4:00-5:30pm / F 1:00-2:30pm
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+
+        <div class="col-sm-8">
+
+            <h4>Course abstract</h4>
+
+            <p>
+                Nowadays we are witnessing the continuous generation of a huge
+                volume of data from heterogeneous sources. Managing, processing,
+                and analyzing such data becomes challenging and requires the
+                adoption of high-performance computing frameworks and techniques.
+                The course discusses the performance bottlenecks in traditional
+                data processing and analytical tools and techniques and presents
+                the opportunities to design scalable solutions leveraging
+                distributed cluster environment architectures. Emphasis is put on
+                the Hadoop and Spark frameworks, with practical examples of big
+                data processing and analytical tasks in real-world applications.
+            </p>
+
+
+            <!--
+            <p>In this class, you will learn about:</p>
+
+            <dl>
+
+                <dt>Software Development Fundamentals</dt>
+                <dd>
+                    To be able to design and implement a Java program to model a
+                    real-world system, and subsequently analyze its behavior.
+                </dd>
+
+                <dt>Programming Languages</dt>
+                <dd>
+                    To know and use basic Java programming constructs for
+                    object-oriented problem solving.
+                </dd>
+
+                <dt>Algorithms and Complexity</dt>
+                <dd>
+                    To appreciate the role of algorithms and data structures in
+                    problem solving and software design.
+                </dd>
+
+                <dt>Software Engineering</dt>
+                <dd>
+                    To develop programming skills that can serve as a foundation
+                    for further study in computer science.
+                </dd>
+
+                <dt>Social Issues and Professional Practice</dt>
+                <dd>
+                    Social implications of computing in a networked world.
+                </dd>
+
+            </dl>
+            -->
+
+
+            <h4>AU Core Quantitative Literacy II (Q2) Outcomes:</h4>
+
+            <ol>
+
+                <li>
+                    Translate real-world questions or intellectual inquiries into
+                    quantitative frameworks.
+                </li>
+
+                <li>
+                    Select and apply appropriate quantitative methods or reasoning.
+                </li>
+
+                <li>
+                    Draw appropriate insights from the application of a quantitative
+                    framework.
+                </li>
+
+                <li>
+                    Explain quantitative reasoning and insights using appropriate
+                    forms of representation so that others could replicate the
+                    findings.
+                </li>
+
+            </ol>
+
+
+            <h4>PySpark and Databricks</h4>
+
+            <p>
+                In this course, we will be using the Python programming interface
+                to the Apache Spark framework (PySpark), in combination with
+                Databricks. You will be able to write and execute PySpark code
+                directly in your browser, without worrying about standalone
+                configuration, and leveraging free access to Databricks' powerful
+                cloud infrastructure. This structure also facilitates collaborative
+                coding.
+            </p>
+
+            <p>
+                Our course has joined the Databricks University Alliance, an active
+                community of professors and educators who collaboratively share
+                ideas to improve the teaching experience and provide students with
+                most recent and relevant developments in terms of data science tools
+                and concepts adopted in the industry.
+
+                In order to start using Databricks, you can set up a free personal
+                account. Instructions to sign up will be provided in the course.
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- ========================================================= -->
+<!-- COURSE SCHEDULE -->
+<!-- ========================================================= -->
+
+<div class="container">
+
+    <div class="panel panel-default">
+
+        <div class="panel-heading" style="text-align: center">
+            <h3>Course Schedule</h3>
+        </div>
+
+
+        <table
+            class="table table-hover"
+            id="schedule">
+
+            <thead>
+
+                <tr>
+                    <th>Date</th>
+                    <th>Topic</th>
+                    <th>Module</th>
+                    <th>Deadlines</th>
+                </tr>
+
+            </thead>
+
+
+            <tbody>
+
+                <!-- WEEK 1 -->
+
+                <tr class="week-header">
+                    <td colspan="4">Week 1</td>
+                </tr>
+
+                <tr>
+                    <td>Tue., Sep. 1</td>
+                    <td>
+                        Introduction to HPC and Cloud
+                        -
+                        <strong>Online (Zoom)</strong>
+                    </td>
+                    <td>S1</td>
+                    <td></td>
+                </tr>
+
+                <tr>
+                    <td>Fri., Sep. 4</td>
+                    <td>
+                        Big Data Analytics
+                        -
+                        <strong>Online (Zoom)</strong>
+                    </td>
+                    <td>S2 - S3</td>
+                    <td></td>
+                </tr>
+
+
+                <!-- WEEK 2 -->
+
+                <tr class="week-header">
+                    <td colspan="4">Week 2</td>
+                </tr>
+
+                <tr>
+                    <td>Tue., Sep. 8</td>
+                    <td>
+                        Hadoop I
+                        -
+                        <strong>Online (Zoom)</strong>
+                    </td>
+                    <td>S4</td>
+                    <td>
+                        <em>Install VM</em>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Fri., Sep. 11</td>
+                    <td>
+                        Hadoop II
+                        -
+                        <strong>Online (Zoom)</strong>
+                    </td>
+                    <td>S4</td>
+                    <td></td>
+                </tr>
+
+
+                <!-- WEEK 3 -->
+
+                <tr class="week-header">
+                    <td colspan="4">Week 3</td>
+                </tr>
+
+                <tr>
+                    <td>Tue., Sep. 15</td>
+                    <td>
+                        NoSQL I: Data Models and Distributed Databases
+                    </td>
+                    <td>S5</td>
+                    <td></td>
+                </tr>
+
+                <tr>
+                    <td>Fri., Sep. 18</td>
+                    <td>
+                        NoSQL II: Cassandra and Applications
+                    </td>
+                    <td>S5</td>
+                    <td></td>
+                </tr>
+
+
+                <!-- WEEK 4 -->
+
+                <tr class="week-header">
+                    <td colspan="4">Week 4</td>
+                </tr>
+
+                <tr>
+                    <td>Tue., Sep. 22</td>
+                    <td>
+                        Spark: Intro, RDDs &amp; Databricks Platform
+                    </td>
+                    <td>S6</td>
+                    <td>
+                        <em>Create Databricks Account</em>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Fri., Sep. 25</td>
+                    <td>
+                        Spark: Dataframes
+                    </td>
+                    <td>S6</td>
+                    <td></td>
+                </tr>
+
+
+                <!-- WEEK 5 -->
+
+                <tr class="week-header">
+                    <td colspan="4">Week 5</td>
+                </tr>
+
+                <tr>
+                    <td>Tue., Sep. 29</td>
+                    <td>
+                        Spark: Transformations
+                    </td>
+                    <td>S7</td>
+                    <td></td>
+                </tr>
+
+                <tr>
+                    <td>Fri., Oct. 2</td>
+                    <td>
+                        Spark: Internals
+                    </td>
+                    <td>S8</td>
+                    <td>
+                        <em>Pool of Papers Release</em>
+                    </td>
+                </tr>
+
+
+                <!-- WEEK 6 -->
+
+                <tr class="week-header">
+                    <td colspan="4">Week 6</td>
+                </tr>
+
+                <tr>
+                    <td>Tue., Oct. 6</td>
+                    <td>
+                        <strong>Midterm Exam I</strong>
+                    </td>
+                    <td></td>
+                    <td></td>
+                </tr>
+
+                <tr>
+                    <td>Fri., Oct. 9</td>
+                    <td>
+                        Spark: Structured Streaming / Delta Lakes
+                    </td>
+                    <td>S9</td>
+                    <td></td>
+                </tr>
+
+
+                <!-- WEEK 7 -->
+
+                <tr class="week-header">
+                    <td colspan="4">Week 7</td>
+                </tr>
+
+                <tr>
+                    <td>Tue., Oct. 13</td>
+                    <td>
+                        Spark: ML and MLlib / Linear Regression
+                    </td>
+                    <td>S10</td>
+                    <td></td>
+                </tr>
+
+                <tr>
+                    <td>Fri., Oct. 16</td>
+                    <td>
+                        <strong>Fall Break (no class)</strong>
+                    </td>
+                    <td></td>
+                    <td></td>
+                </tr>
+
+
+                <!-- WEEK 8 -->
+
+                <tr class="week-header">
+                    <td colspan="4">Week 8</td>
+                </tr>
+
+                <tr>
+                    <td>Tue., Oct. 20</td>
+                    <td>
+                        Spark: MLflow / Decision Trees
+                    </td>
+                    <td>S11</td>
+                    <td></td>
+                </tr>
+
+                <tr>
+                    <td>Fri., Oct. 23</td>
+                    <td>
+                        Spark: HyperOpt / Random Forest
+                    </td>
+                    <td>S12</td>
+                    <td></td>
+                </tr>
+
+
+                <!-- WEEK 9 -->
+
+                <tr class="week-header">
+                    <td colspan="4">Week 9</td>
+                </tr>
+
+                <tr>
+                    <td>Tue., Oct. 27</td>
+                    <td>
+                        Spark: HyperOpt / AutoML / Gradient Boosted Trees
+                    </td>
+                    <td>S13</td>
+                    <td></td>
+                </tr>
+
+                <tr>
+                    <td>Fri., Oct. 30</td>
+                    <td>
+                        Spark: Pandas UDF
+                    </td>
+                    <td>S13</td>
+                    <td></td>
+                </tr>
+
+
+                <!-- WEEK 10 -->
+
+                <tr class="week-header">
+                    <td colspan="4">Week 10</td>
+                </tr>
+
+                <tr>
+                    <td>Tue., Nov. 3</td>
+                    <td>
+                        Spark: Distributed k-Means / Logistic Regression /
+                        Collaborative Filtering
+                    </td>
+                    <td>S14</td>
+                    <td></td>
+                </tr>
+
+                <tr>
+                    <td>Fri., Nov. 6</td>
+                    <td>
+                        Graph Analysis: GraphX / Case Study / GraphFrames
+                    </td>
+                    <td>S15</td>
+                    <td>
+                        <em>Project Guidelines</em>
+                    </td>
+                </tr>
+
+
+                <!-- WEEK 11 -->
+
+                <tr class="week-header">
+                    <td colspan="4">Week 11</td>
+                </tr>
+
+                <tr>
+                    <td>Tue., Nov. 10</td>
+                    <td>
+                        Deep Learning / Hyperopt / Transfer Learning / One-Class
+                    </td>
+                    <td>S16</td>
+                    <td></td>
+                </tr>
+
+                <tr>
+                    <td>Fri., Nov. 13</td>
+                    <td>
+                        Deep Learning: Horovod
+                    </td>
+                    <td>S17</td>
+                    <td>
+                        <strong>Paper critiques submission</strong>
+                    </td>
+                </tr>
+
+
+                <!-- WEEK 12 -->
+
+                <tr class="week-header">
+                    <td colspan="4">Week 12</td>
+                </tr>
+
+                <tr>
+                    <td>Tue., Nov. 17</td>
+                    <td>
+                        Deep Learning: Model Interpretability
+                    </td>
+                    <td>S17</td>
+                    <td></td>
+                </tr>
+
+                <tr>
+                    <td>Fri., Nov. 20</td>
+                    <td>
+                        Spark: NLP
+                        <br>
+                        <strong>Invited Guest</strong>
+                    </td>
+                    <td>S18</td>
+                    <td>
+                        <em>
+                            Project: Data Exploration / Pre-processing
+                        </em>
+                    </td>
+                </tr>
+
+
+                <!-- WEEK 13 -->
+
+                <tr class="week-header">
+                    <td colspan="4">Week 13</td>
+                </tr>
+
+                <tr>
+                    <td>Tue., Nov. 24</td>
+                    <td>
+                        Spark: ML Deployment / ML in Production
+                    </td>
+                    <td>S19</td>
+                    <td>
+                        <em>Project: Modeling</em>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Fri., Nov. 27</td>
+                    <td>
+                        <strong>
+                            Thanksgiving Holiday (no class)
+                        </strong>
+                    </td>
+                    <td></td>
+                    <td></td>
+                </tr>
+
+
+                <!-- WEEK 14 -->
+
+                <tr class="week-header">
+                    <td colspan="4">Week 14</td>
+                </tr>
+
+                <tr>
+                    <td>Tue., Dec. 1</td>
+                    <td>
+                        <strong>Midterm Exam II</strong>
+                    </td>
+                    <td></td>
+                    <td></td>
+                </tr>
+
+                <tr>
+                    <td>Fri., Dec. 4</td>
+                    <td>
+                        Spark: Performance Optimization
+                    </td>
+                    <td>S20</td>
+                    <td></td>
+                </tr>
+
+
+                <!-- WEEK 15 -->
+
+                <tr class="week-header">
+                    <td colspan="4">Week 15</td>
+                </tr>
+
+                <tr>
+                    <td>Tue., Dec. 8</td>
+                    <td>
+                        <strong>Paper Presentations</strong>
+                    </td>
+                    <td></td>
+                    <td></td>
+                </tr>
+
+                <tr>
+                    <td>Fri., Dec. 11</td>
+                    <td>
+                        <strong>Paper Presentations</strong>
+                    </td>
+                    <td></td>
+                    <td>
+                        <strong>Project submission</strong>
+                    </td>
+                </tr>
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</div>
+
+
+<hr>
+
+
+<!-- ========================================================= -->
+<!-- SYLLABUS -->
+<!-- ========================================================= -->
+
+<div class="container">
+
+    <div style="text-align:center">
+        <h2>Syllabus</h2>
+    </div>
+
+
+    <div class="row">
+
+
+        <!-- ================================================= -->
+        <!-- LEFT COLUMN -->
+        <!-- ================================================= -->
+
+        <div class="col-sm-6">
+
+
+            <h3>Grading</h3>
+
+
+            <h4>CSC-483</h4>
+
+            <br>
+
+            <table class="table table-hover">
+
+                <tr>
+                    <th>Component</th>
+                    <th>Weight</th>
+                </tr>
+
+                <tr>
+                    <td>Midterm Exams (2)</td>
+                    <td>40% (2 x 20%)</td>
+                </tr>
+
+                <tr>
+                    <td>
+                        Research Papers: 2 critiques + 1 presentation
+                    </td>
+                    <td>20%</td>
+                </tr>
+
+                <tr>
+                    <td>Final Project</td>
+                    <td>30%</td>
+                </tr>
+
+                <tr>
+                    <td>In-class activities</td>
+                    <td>10%</td>
+                </tr>
+
+            </table>
+
+
+            <br><br>
+
+
+            <h4>CSC-683</h4>
+
+            <br>
+
+            <table class="table table-hover">
+
+                <tr>
+                    <th>Component</th>
+                    <th>Weight</th>
+                </tr>
+
+                <tr>
+                    <td>Midterm Exams (2)</td>
+                    <td>30% (2 x 15%)</td>
+                </tr>
+
+                <tr>
+                    <td>
+                        Research Papers: 3 critiques + 1 presentation
+                    </td>
+                    <td>20%</td>
+                </tr>
+
+                <tr>
+                    <td>Final Project</td>
+                    <td>40%</td>
+                </tr>
+
+                <tr>
+                    <td>In-class activities</td>
+                    <td>10%</td>
+                </tr>
+
+            </table>
+
+
+            <br>
+
+
+            <h3>Attendance</h3>
+
+            <p>
+                Students are recommended to attend all lectures. Prolonged
+                absences must be discussed with the instructor. If you cannot
+                attend lectures regularly due to work or other obligations,
+                please reach out to the instructor so that I know about it.
+            </p>
+
+
+            <!--
+            <p>
+                Students who arrive after the start of class will receive half
+                credit for attendance on that day. Students who arrive after
+                30 minutes will be counted absent.
+            </p>
+            -->
+
+
+            <br>
+
+
+            <h3>Exams</h3>
+
+            <p>
+                Exams cover the material from the lectures, projects, and
+                reading. While not necessarily cumulative, each exam will
+                require understanding many of the concepts covered in the
+                preceding exams. Exams consist of multiple choice, short
+                answer, and long answer questions. Each exam is weighted
+                equally within the corresponding grading structure.
+            </p>
+
+
+            <p>
+                For the <strong>Final Project</strong>, students will propose
+                their own topic in consultation with the instructor.
+            </p>
+
+
+            <br>
+
+
+            <h3>Late Submissions</h3>
+
+            <p>
+                A penalty of 5% per day will be levied. The course does not
+                grant extensions on homework, lab, or project submission
+                deadlines unless you have an extremely compelling excuse,
+                such as observance of a religious holiday, in which case you
+                need to let me know in advance.
+            </p>
+
+
+            <br>
+
+
+            <h3>Letter Grades</h3>
+
+            <table class="table table-hover">
+
+                <tr>
+                    <th>Range</th>
+                    <th>Letter</th>
+                </tr>
+
+                <tr>
+                    <td>&gt;=93</td>
+                    <td>A</td>
+                </tr>
+
+                <tr>
+                    <td>&gt;=90</td>
+                    <td>A-</td>
+                </tr>
+
+                <tr>
+                    <td>&gt;=87</td>
+                    <td>B+</td>
+                </tr>
+
+                <tr>
+                    <td>&gt;=83</td>
+                    <td>B</td>
+                </tr>
+
+                <tr>
+                    <td>&gt;=80</td>
+                    <td>B-</td>
+                </tr>
+
+                <tr>
+                    <td>&gt;=77</td>
+                    <td>C+</td>
+                </tr>
+
+                <tr>
+                    <td>&gt;=73</td>
+                    <td>C</td>
+                </tr>
+
+                <tr>
+                    <td>&gt;=70</td>
+                    <td>C-</td>
+                </tr>
+
+                <tr>
+                    <td>&gt;=60</td>
+                    <td>D</td>
+                </tr>
+
+                <tr>
+                    <td>&lt;60</td>
+                    <td>F</td>
+                </tr>
+
+            </table>
+
+        </div>
+
+
+        <!-- ================================================= -->
+        <!-- RIGHT COLUMN -->
+        <!-- ================================================= -->
+
+        <div class="col-sm-6">
+
+
+            <h3>Academic Integrity</h3>
+
+            <p>
+                Even though we encourage collaboration with a partner, sharing
+                code between groups is strictly forbidden - this is a form of
+                plagiarism. As is showing your work to other students, even
+                just for a second. There is rarely one single correct way to
+                write code that solves a problem.
+            </p>
+
+            <p>
+                While we want you to feel free to discuss your approach freely
+                with a partner, you should know that there are often many
+                solutions for a given problem and it is typically obvious when
+                one student shares code with another.
+            </p>
+
+            <p>
+                If you directly copy and paste code from the Internet
+                (or even text), cite your source in your comments, but also
+                ensure that you understand what the code is doing - not all
+                code on the web is good.
+            </p>
+
+            <p>
+                Assignments will be checked using plagiarism detection software
+                and by hand to ensure the originality of the work.
+            </p>
+
+            <p>
+                Do not share your code with anyone other than a partner. Do not
+                let someone look at your screen. You may get behind, or your
+                friend may ask for help, but the consequences for plagiarism
+                are far worse than an incomplete submission.
+            </p>
+
+            <p>
+                If I suspect that you have purposely shared code with another
+                student or presented someone else's work as your own, the
+                matter will be referred to the Academic Integrity Code
+                Administrator for adjudication.
+            </p>
+
+            <p>
+                If you are found responsible for an academic integrity
+                violation, sanctions can include a failing grade for the
+                course, suspension for one or more academic terms, dismissal
+                from the university, or other measures as deemed appropriate
+                by the Dean.
+            </p>
+
+            <p>
+                All students are expected to adhere to the
+                <a
+                    href="https://www.american.edu/academics/integrity/code.cfm">
+                    American University Honor Code.
+                </a>
+
+                If you have a question about whether or not something is
+                permissible, ask the instructor or the TA first.
+            </p>
+
+
+            <br>
+
+
+            <h3>Textbook</h3>
+
+            <p>
+                This course partially adopts the textbook
+                "<strong>Learning Spark</strong>", 2nd Edition,
+                published by O'Reilly Media, Inc.
+            </p>
+
+            <p>
+                The online version of the book may be accessible for free from
+                <a
+                    href="https://subjectguides.library.american.edu/az.php?a=o"
+                    target="new">
+                    AU’s online Library
+                </a>.
+            </p>
+
+            <p>
+                After selecting "O’Reilly Online Learning" from the list and
+                logging in with your AU account, you should be able to search
+                for the book by name, or try accessing it from this
+                <a
+                    href="https://learning.oreilly.com/library/view/learning-spark-2nd/9781492050032/"
+                    target="new">
+                    link
+                </a>.
+            </p>
+
+            <p>
+                Additional learning resources in the form of slides, readings,
+                and coding examples will be provided on Canvas throughout the
+                course.
+            </p>
+
+            <br>
+
+            <img
+                class="img-responsive"
+                src="spark-textbook.jpeg"
+                alt="Learning Spark textbook">
+
+            <br><br>
+
+
+            <!--
+            <h3>Software Tools</h3>
+
+            <p>
+                In this course you will utilize an Integrated Development
+                Environment (IDE) to write code.
+            </p>
+
+
+            <h3>Students with Disabilities</h3>
+
+            <p>
+                If you wish to receive accommodations for a disability, please
+                notify me with a letter from the Academic Support and Access
+                Center.
+            </p>
+
+
+            <h3>Academic Support</h3>
+
+            <p>
+                All students may take advantage of the Academic Support and
+                Access Center (ASAC) for individual academic skills counseling,
+                workshops, tutoring, peer tutor referrals, and Supplemental
+                Instruction.
+            </p>
+            -->
+
+
+            <br>
+
+
+            <h3>Acknowledgments</h3>
+
+            Course design by Roberto Corizzo at American University.
+
+            <br><br>
+
+            Special thanks to the Databricks University Alliance for their
+            educational and computational resources.
+
+            <br><br>
+
+            Thanks to Alex Godwin at American University for designing this
+            syllabus template.
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<br>
+
+
+<!-- ========================================================= -->
+<!-- BOOTSTRAP / LEGACY CODE -->
+<!-- ========================================================= -->
+
+<!--
+Bootstrap core JavaScript
+=========================================================
+Placed at the end of the document so the pages load faster
+-->
+
+<!--
+<script src="./js/jquery-1.10.2.min.js"></script>
+<script src="./js/bootstrap.min.js"></script>
+-->
+
+
+<!--
+<iframe
+    id="rdbIndicator"
+    width="100%"
+    height="270"
+    border="0"
+    src="./index_files/indicator.htm"
+    style="
+        display: none;
+        border: 0;
+        position: fixed;
+        left: 0;
+        top: 0;
+        z-index: 2147483647;">
+</iframe>
+
+<center>
+
+<script type="text/javascript">
+
+    var sc_project = 9652407;
+    var sc_invisible = 0;
+    var sc_security = "a9e6dcaf";
+
+    var scJsHost =
+        (("https:" == document.location.protocol)
+        ? "https://secure."
+        : "http://www.");
+
+    document.write(
+        "<sc" +
+        "ript type='text/javascript' src='" +
+        scJsHost +
+        "statcounter.com/counter/counter.js'>" +
+        "</sc" +
+        "ript>"
+    );
+
+</script>
+
+<noscript>
+
+    <div class="statcounter">
+
+        <a
+            title="shopify analytics"
+            href="http://statcounter.com/shopify/"
+            target="_blank">
+
+            <img
+                class="statcounter"
+                src="http://c.statcounter.com/9652407/0/a9e6dcaf/0/"
+                alt="shopify analytics">
+
+        </a>
+
+    </div>
+
+</noscript>
+
+</center>
+-->
+
+
+</body>
+
+</html>
